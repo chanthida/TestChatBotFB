@@ -22,7 +22,11 @@ $botman->hears('I want ([0-9]+)', function ($bot, $number) {
 });
 
 $botman->group(['driver' => \BotMan\Drivers\Facebook\FacebookDriver::class], function($bot) {
-    $bot->hears('5555', function($bot) {
+    $bot->hears('hiya', function($bot) {
+//        $bot->reply(\BotMan\Drivers\Facebook\Extensions\ButtonTemplate::create('Do you want to know more about BotMan?')
+//            ->addButton(\BotMan\Drivers\Facebook\Extensions\ElementButton::create('Tell me more')->type('postback')->payload('tellmemore'))
+//            ->addButton(\BotMan\Drivers\Facebook\Extensions\ElementButton::create('Show me the docs')->url('http://botman.io/'))
+//        );
         $bot->reply('Nice to meet you!');
     });
 });
